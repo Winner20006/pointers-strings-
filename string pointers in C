@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include<math.h>
+void weed_out(const char* str){
+  const char* temp = str;
+   while (*temp != '\0'){
+   temp++;}
+  temp--;
+  while(1){ 
+  if (*str==*temp) //moves on characters
+  {
+    str++; 
+    temp--;}
+  else
+    break;
+  } 
+  int i=0;
+  while (str != (temp+1)) // moves like index 
+  {
+   printf("%c", *str);
+   str++;
+   }
+}
+int main() { 
+  weed_out("aaaabcdefaaaa");
+  return 0;
+}
